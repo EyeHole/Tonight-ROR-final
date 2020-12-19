@@ -1,0 +1,42 @@
+<div class="col-sm-4 mx-auto">
+<h2><%= t(:'Sign up') %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="devise-container">
+    <div class="row">
+            <%= render "devise/shared/error_messages", resource: resource %>
+            <div class="notice"><%= notice %></div>
+            <div class="alert error"><%= alert %></div>
+          </div>
+    <div class="row">
+      <div class="form-group">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <%= f.label :password,  (t(:'Password'))%>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> <%= t(:'characters minimum') %>)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group">
+        <%= f.label :password_confirmation, (t(:'Password confirmation')) %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 16px;">
+        <%= render "devise/shared/links" %>
+    </div>
+    <div class="row">
+      <div class="actions">
+        <%= f.submit (t(:'Sign up')), class: "btn btn-lg btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>

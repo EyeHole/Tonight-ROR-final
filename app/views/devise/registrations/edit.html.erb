@@ -1,0 +1,39 @@
+<h2> <%= t(:'Edit profile') %></h2>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, class: "form-control", required: true %>
+      </div>
+    </div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <%= f.label :password, (t(:'Password')) %> <br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <%= f.label :password_confirmation, (t(:'Password confirmation')) %> <br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <%= f.label :current_password, (t(:'Current password')) %><br />
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control", required: true %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit (t(:'Update')), class: "btn btn-primary mb-4" %>
+    </div>
+  <% end %>
+<h3><%= t(:'Cancel my account') %></h3>
+
+<p><%= t(:'Unhappy?') %> <%= button_to (t(:'Cancel my account')), registration_path(resource_name), method: :delete, class: "btn btn-danger" %></p>
+
+<%= link_to (t(:'Back')), :back, class: "btn btn-info" %>

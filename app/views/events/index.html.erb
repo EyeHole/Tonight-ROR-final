@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<h2 class="mb-4"><%= t(:'Events list') %></h2>
+<div class="event-block">
+   <% Array(@events).each do |event| %>
+      <div class="card mb-5">
+        <div class="card-header">
+          <%= t(:'by') %> <%= event.user.email %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> <%= event.name %></h5>
+        </div>
+        <div class="card-body">
+          <p><%= t(:'Starts') %>: <%= event.start_date.strftime('%d.%m.%Y %H:%M') %></p>
+          <hr>
+          <p><%= t(:'Ends') %>: <%= event.end_date.strftime('%d.%m.%Y %H:%M') %></p>
+          <hr>
+          <p><%= event.description %></p>
+        </div>
+        <div class="card-body">
+            <%= link_to (t(:'I will go!')), {"controller"=>"add_visitor", "action"=>"event_registration", event_id: event.id}, class: "btn btn-info"%>
+        </div>
+      </div>
+  <% end %>
+</div>
+<br>
+<% if user_signed_in? %>
+<%= link_to (t(:'New event')), new_event_path, class: "btn btn-primary" %>
+<% end %>

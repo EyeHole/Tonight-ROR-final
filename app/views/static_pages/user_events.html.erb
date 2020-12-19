@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<h2 class="mb-4"><%= t(:'Created events') %></h2>
+<div class="event-block">
+  <% Array(@events).each do |event| %>
+      <div class="card mb-5">
+        <div class="card-header">
+          <%= t(:'by') %> <%= event.user.email %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"> <%= event.name %></h5>
+        </div>
+        <div class="card-body">
+          <p><%= t(:'Starts') %>: <%= event.start_date.strftime('%d.%m.%Y %H:%M') %></p>
+          <hr>
+          <p><%= t(:'Ends') %>: <%= event.end_date.strftime('%d.%m.%Y %H:%M') %></p>
+          <hr>
+          <div class="intro_inner">
+            <div class="press btn btn-outline-primary mb-4"><%= t(:'Description') %></div>
+            <div class="hidden_text"><%= event.description %></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <%= link_to (t(:'Show')), event_path(event), class: "btn btn-info" %>
+          <%= link_to (t(:'Edit')), edit_event_path(event), class: "btn  btn-warning" %>
+          <%= link_to (t(:'Destroy')), event_path(event), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </div>
+      </div>
+  <% end %>
+</div>
+<%= link_to (t(:'New event')), new_event_path, class: "btn btn-lg btn-info mt-auto" %>
+</div>
+<br>
+
+<script>
+[...document.querySelectorAll('.press')].forEach(btn => {
+  btn.addEventListener('click', function() {
+    if (this.parentNode.style.height == '120px') {
+      this.parentNode.children[1].style.height = '0px';
+      this.parentNode.style.height = '20px';
+    }
+    else {
+      this.parentNode.children[1].style.height = '80px';
+      this.parentNode.style.height = '120px';
+    }
+
+  })
+});
+</script>

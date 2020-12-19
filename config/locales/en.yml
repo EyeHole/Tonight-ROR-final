@@ -1,0 +1,100 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  'All events in one place': 'All events in one place'
+  'To events': 'To events'
+  'Get started': 'Get started'
+
+  'Home': 'Home'
+  'Events': 'Events'
+  'All events': 'All events'
+  'Created events': 'Created events'
+  'New event': 'New event'
+  'About': 'About'
+  'Profile': 'Profile'
+  'My profile': 'My profile'
+  'Logout': 'Logout'
+  'Sign up': 'Sign up'
+  'Log in': 'Log in'
+
+  'This is an educational Ruby on Rails project': 'This is an educational Ruby on Rails project'
+  'carried out on the course': 'carried out on the course'
+  'Internet Programming Languages': 'Internet Programming Languages'
+  'by Anna Bushe, a student of the IU6-31B group': 'by Anna Bushe, a student of the IU6-31B group'
+  
+  'Edit profile': 'Edit profile'
+  'My events': 'My events'
+
+  'Show': 'Show'
+  'Edit': 'Edit'
+  'Destroy': 'Destroy'
+  'Description': 'Description'
+
+  'prohibited this event from being saved': 'prohibited this event from being saved'
+  'Name': 'Name'
+  'Event starts (GMT+3 Moscow)': 'Event starts (GMT+3 Moscow)'
+  'Event ends (GMT+3 Moscow)': 'Event ends (GMT+3 Moscow)'
+  'Create': 'Create'
+  'Editiong event': 'Editiong event'
+  'Events list': 'Events list'
+  'I will go!': 'I will go!'
+  'Starts': 'Starts'
+  'Ends': 'Ends'
+  'by': 'by'
+
+  'Event': 'Event'
+  'Visitors': 'Visitors'
+
+  'Thank you for registration': 'Thank you for registration'
+  'User with this email is already registered': 'User with this email is already registered'
+
+  'Resend confirmation instructions': 'Resend confirmation instructions'
+  'Change your password': 'Change your password'
+  'New password': 'New password'
+  'Confirm new password': 'Confirm new password'
+  'Forgot your password?': 'Forgot your password?'
+  'Send me reset password instructions': 'Send me reset password instructions'
+  'Password': 'Password'
+  'Password confirmation': 'Password confirmation'
+  'Current password': 'Current password'
+  'Update': 'Update'
+  'Cancel my account': 'Cancel my account'
+  'Unhappy?': 'Unhappy?'
+  'Back': 'Back'
+  'characters minimum': 'characters minimum'
+  'Remember me': 'Remember me'
+
+  'Event was successfully created': 'Event was successfully created'
+  'Event was successfully updated': 'Event was successfully updated'
+  'Event was successfully destroyed': 'Event was successfully destroyed'
+
+  'You do not have access to this event': 'You do not have access to this event'

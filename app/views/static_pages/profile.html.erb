@@ -1,0 +1,18 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= t(:'Profile') %></h1>
+    <p class="lead">Email: <%=  @user.email %></p>
+    <div class="profile-button-block">
+        <%= link_to (t(:'Edit profile')), edit_user_registration_path, class: "btn btn-primary btn-lg profile-button" %>
+    </div>
+    <div class="profile-button-block">
+        <%= link_to (t(:'Logout')), destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg profile-button" %>
+    </div>
+    <div class="profile-button-block">
+        <%= link_to (t(:'Created events')), '../static_pages/user_events/', class: "btn btn-info btn-lg profile-button" %>
+    </div>
+    <div class="profile-button-block">
+        <%= link_to (t(:'My events')), '../static_pages/user_visitor/', class: "btn btn-primary btn-lg profile-button" %>
+    </div>
+  </div>
+</div>

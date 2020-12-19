@@ -1,0 +1,15 @@
+<div class="col-sm-10 mx-auto">
+    <div class="card mx-auto text-center w-100 h-100">
+    <div class="notice"><%= notice %></div>
+    <div class="alert error"><%= alert %></div>
+    <h1 class="card-title display-1">Tonight!</h1>
+    <h2 class="mb-4"> <%= t(:'All events in one place') %></h2>
+    <p class="lead">
+    <% if user_signed_in? %>
+         <%= link_to (t(:'To events')), events_path, class:"btn btn-lg btn-dark" %>
+    <% else %>
+        <%= link_to (t(:'Get started')), new_user_session_path, class:"btn btn-lg btn-dark" %>
+    <% end %>
+    </p>
+    </div>
+</div>

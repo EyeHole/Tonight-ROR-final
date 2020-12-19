@@ -1,0 +1,5 @@
+ <% unless @error %>
+    <h1><%= t(:'Thank you for registration') %>!</h1>
+ <% else %>
+    <h1 class="error"> <%= t(:'User with this email is already registered') %>. </h1>
+ <% end %>

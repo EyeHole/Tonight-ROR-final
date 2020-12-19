@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# one:
+#   name: MyString
+#   start_date: DateTime.now + 2.hours
+#   end_date: DateTime.now + 3.hours
+#   user_id: 1
+#   description: MyString
+
+# two:
+#   name: MyString
+#   start_date: 2020-14-10 13:41:04
+#   end_date: 2020-14-10 15:41:04
+#   user_id: 1
+#   description: MyString
