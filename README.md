@@ -1,24 +1,32 @@
-# README
+# Tonight!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tonight! is a simple event aggregator: it provides an opportunity to create, edit and delete events as well as to register on them and view the list of registered users for the created event.
 
-Things you may want to cover:
+It is an educational Ruby on Rails project, carried out on the course "Internet Programming Languages" (Языки Интернет-программирования). 
 
-* Ruby version
+## Getting started
 
-* System dependencies
+### Prerequisites
+Ruby 2.7.1
+Rails 6.0.3.4
+Bundler 2.1.4
 
-* Configuration
+### Installing
 
-* Database creation
+    git clone https://gitlab.com/AnnaBushe/tonight-ror-final.git
+    cd tonight-ror-final
+To install all gems from Gemfile
 
-* Database initialization
+    bundle install
 
-* How to run the test suite
+### Running
 
-* Services (job queues, cache servers, search engines, etc.)
+    rails -s
 
-* Deployment instructions
+### Running automated tests
 
-* ...
+    rake test
+
+## Author
+
+Anna Bushe - @AnnaBushe (Git & Telegram)
