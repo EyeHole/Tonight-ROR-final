@@ -15,7 +15,7 @@ It is an educational Ruby on Rails project, carried out on the course "Internet 
 
 ### Installing
 
-    git clone https://gitlab.com/AnnaBushe/tonight-ror-final.git
+    git clone https://github.com/EyeHole/Tonight-ROR-final.git
     cd tonight-ror-final
 To install all gems from Gemfile
 
