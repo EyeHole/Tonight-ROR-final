@@ -7,9 +7,11 @@ It is an educational Ruby on Rails project, carried out on the course "Internet 
 ## Getting started
 
 ### Prerequisites
-Ruby 2.7.1
-Rails 6.0.3.4
-Bundler 2.1.4
+* Ruby 2.7.1
+
+* Rails 6.0.3.4
+
+* Bundler 2.1.4
 
 ### Installing
 
